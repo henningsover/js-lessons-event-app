@@ -8,6 +8,8 @@ function App() {
   const passwordInput = useRef(null);
 
   function login() {
+    const email = emailInput.current.value;
+    const password = passwordInput.current.value;
     const payload = {
       email: "test.user@willandskill.se",
       password: "js-lesson-10",
