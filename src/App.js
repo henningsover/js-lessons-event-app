@@ -33,7 +33,7 @@ function App() {
       <div>
         <div>
           <label htmlFor="email">Email</label>
-          <input ref={emailInput} name="email" type="text" placeholder="john.doe@company.com" />
+          <input ref={emailInput} name="email" type="email" placeholder="john.doe@company.com" />
         </div>
         <div>
           <label htmlFor="password">Password</label>
