@@ -1,12 +1,11 @@
 import React from "react";
-import LoginForm from "./components/LoginForm";
 import { Switch, Route } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
     <div>
-      <h1>Event App</h1>
-      <LoginForm />
+      <LoginPage />
     </div>
   );
 }
