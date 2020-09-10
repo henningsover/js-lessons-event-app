@@ -9,8 +9,8 @@ function App() {
 
   function login() {
     const payload = {
-      email: `${email}`,
-      password: `${password}`,
+      email: email,
+      password: password,
     };
     fetch(LOGIN_URL, {
       method: "POST",
