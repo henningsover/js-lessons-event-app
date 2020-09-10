@@ -1,8 +1,25 @@
 import React from "react";
 
+const ROOT_URL = "http://yoshi.willandskill.eu:8999/api/v1/";
+const LOGIN_URL = `${ROOT_URL}auth/api-token-auth/`;
+
 function App() {
   function login() {
-    console.log("login");
+    const payload = {
+      email: "test.user@willandskill.se",
+      password: "js-lesson-10",
+    };
+    fetch(LOGIN_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data.token);
+      });
   }
 
   return (
