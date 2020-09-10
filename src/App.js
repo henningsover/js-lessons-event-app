@@ -4,8 +4,9 @@ const ROOT_URL = "http://yoshi.willandskill.eu:8999/api/v1/";
 const LOGIN_URL = `${ROOT_URL}auth/api-token-auth/`;
 
 function App() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [token, setToken] = useState(null);
+  const [email, setEmail] = useState("test.user@willandskill.se");
+  const [password, setPassword] = useState("js-lesson-10");
 
   function login() {
     const payload = {
@@ -21,9 +22,10 @@ function App() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.token);
+        setToken(data.token);
       });
   }
+  console.log(token);
 
   return (
     <div>
